@@ -1,0 +1,160 @@
+/* Logo CSS Animation   */
+  .logo-loader {
+    max-width: 3rem;
+    width: 100%;
+    height: auto;
+    stroke-linecap: round;
+  }
+  circle {
+    fill: none;
+    stroke-width: 3.5;
+    animation-name: preloader;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: 170px 170px;
+    will-change: transform;
+  }
+  circle:nth-of-type(1) {
+    stroke-dasharray: 550px;
+  }
+  circle:nth-of-type(2) {
+    stroke-dasharray: 500px;
+  }
+  circle:nth-of-type(3) {
+    stroke-dasharray: 450px;
+  }
+  circle:nth-of-type(4) {
+    stroke-dasharray: 300px;
+  }
+  circle:nth-of-type(1) {
+    animation-delay: -0.15s;
+  }
+  circle:nth-of-type(2) {
+    animation-delay: -0.3s;
+  }
+  circle:nth-of-type(3) {
+    animation-delay: -0.45s;
+  }
+  circle:nth-of-type(4) {
+    animation-delay: -0.6s;
+  }
+  @keyframes preloader {
+    50% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed');
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.navbar-nav {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  display: inline-flex;
+}
+
+a {
+  position: relative;
+  padding: 1rem 0 0.5rem;
+  margin: 0 1.5rem;
+  color:white;
+  text-decoration: none;
+}
+a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: 50% 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #2196F3;
+  transition: transform 250ms;
+}
+a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Mouse CSS */
+.mouse {
+  max-width: 2.5rem;
+  width: 100%;
+  height: auto;
+}
+.scroll {
+  animation-name: scroll;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.65, -0.55, 0.25, 1.5);
+  animation-iteration-count: infinite;
+  transform-origin: 50% 20.5px;
+  will-change: transform;
+  fill: #FFF;
+}
+.scroll-link {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@keyframes scroll {
+  0%, 20% {
+    transform: translateY(0) scaleY(1);
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(36px) scaleY(2);
+    opacity: 0.01;
+  }
+}
+
+/* Custom CSS */
+.lighter {
+  font-weight: lighter;
+}
+
+.overlay {
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1;
+}
+
+nav {
+  border-bottom: 1px solid #FFF;
+}
+
+i.left {
+  margin-right: 0 !important;
+}
+
+a {
+  margin: 0 0.5rem !important;
+}
+
+[type="checkbox"]+span:not(.lever) {
+  padding-left: 30px;
+}
+
+.black-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0 15px 15px 15px;
+  margin-left: 10px;
+}
+
+.selected {
+  background-color: rgba(0,0,0,0.1);
+}
