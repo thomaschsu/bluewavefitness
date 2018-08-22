@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
-  var Workout = sequelize.define("Workout", {
-    exerciseId: {
+  var Exercise = sequelize.define("Exercise", {
+    name: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -18,13 +18,13 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  Workout.associate = function(models) {
-    // Associating Author with Posts
-    // When an Author is deleted, also delete any associated Posts
-    Workout.hasMany(models.Exercise, {
-      onDelete: "cascade"
+  Exercise.associate = function(models) {
+    Exercise.belongsTo(models.Workout, {
+      foreignKey: {
+        allowNull: false
+      }
     });
   };
 
-  return Workout;
+  return Exercise;
 };

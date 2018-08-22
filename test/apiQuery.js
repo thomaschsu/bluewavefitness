@@ -3,7 +3,9 @@ var request = require("request");
 var url = "https://wger.de/api/v2/";
 var apiKey = "f87b772b992c8290908b909c0a1c1a5988c0b19c";
 
-var category =         [{
+var category =         
+[
+    {
         id: 10,
         name: "Abs"
     },
