@@ -1,9 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
-  var Workout = sequelize.define("workout", {
-    exercise: {type:DataTypes.STRING,allowNull: false},
-    reps: {type: DataTypes.INTEGER, defautValue: 0},
-    sets: {type: DataTypes.INTEGER, defautValue: 0},
-    weight: {type: DataType.INTEGER, defautValue: 0}
+  var Workout = sequelize.define("Workout", {
+    exercise_name: {type:DataTypes.STRING,allowNull: false}
   });
+
+  Workout.associate = function(models) {
+    Workout.hasMany(models.Exercise, {
+      onDelete: "cascade"
+    });
+  };
   return Workout;
 };
