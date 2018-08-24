@@ -31,13 +31,14 @@ var category = [{
 
 $(".group").on("click", function() {
     var cat = $(this).attr("val");
+    console.log(cat);
     var state = $(this).attr("state");
     if (state === "off") {
         $(this).attr("state", "on");
         $.ajax({
             url: url + "exercise/?limit=100&muscle=" + cat + "&language=2",
             success: function(err, body, result) {
-                //console.log(err.results)
+                console.log(err.results)
 
                 for (i = 0; i < err.results.length; i++) {
                     if (err.results[i].name === "" ) {} else {
