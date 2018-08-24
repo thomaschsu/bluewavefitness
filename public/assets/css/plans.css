@@ -141,7 +141,7 @@ margin-right: auto;
     position: relative;
     padding: 1rem 0 0.5rem;
     margin: 0 1.5rem;
-    color:gold;
+    color:white;
     text-decoration: none;
   }
   a::after {
@@ -235,6 +235,7 @@ margin-right: auto;
   .muscle-fix {
       padding: 5px 0;
       display: block;
+
   }
 
   .cardHolder {
