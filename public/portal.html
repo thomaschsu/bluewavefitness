@@ -85,7 +85,7 @@
     </div>
     <div class="row">
       <div style="margin-bottom:0;">
-        <div class="col s6" style="padding:0; margin-right: 5px;">
+        <div class="col s7" style="padding:0; margin-right: 5px;">
           <!-- Modal Trigger -->
           <div class="card" style="margin-top: 0;">
             <a class="modal-trigger" href="#modal1">
@@ -94,7 +94,7 @@
                 <span class="card-title text-shadow">
                   Workout of the Day<br>
                   <h3 id="exercisename" class="right">Deadlift</h3>
-                  <br>August 22
+                  <br>August 25
                 </span>
               </div>
             </a>
@@ -117,10 +117,12 @@
               allowfullscreen></iframe>
           </div>
         </div>
-        <div id="time" class="box2 grey time grid-example col s2 white-text lighten-2 z-depth-2 text-shadow" style="height: 230px;">
+        <div id="time" class="box2 grey lighten-1 time grid-example col s2 white-text lighten-2 z-depth-2 text-shadow" style="height: 260px;">
+          <div
+            class="center"><i class="large material-icons">access_time</i></div>
         </div>
         <a href="plans.html">
-          <div class="box3 grid-example col s2 yellow lighten-2 z-depth-3 pulse" style="height: 230px;">
+          <div class="box3 grid-example col s2 yellow lighten-2 z-depth-3 pulse" style="height: 260px;">
             <h5 class="flow-text center text-shadow">Train Smarter</h5>
             <div class="center">
               <i class="material-icons large center text-shadow white-text">lightbulb_outline</i>
@@ -130,7 +132,7 @@
           </div>
         </a>
         <a class="modal-trigger" href="#modal2">
-          <div class="box3 grid-example col s2 red darken-1 white-text lighten-2 z-depth-3" style="margin-top: 5px; height: 230px;">
+          <div class="box3 grid-example col s2 red darken-1 white-text lighten-2 z-depth-3" style="margin-top: 5px; height: 260px;">
             <h5 class="flow-text center text-shadow">Watch Videos</h5>
             <br>
             <div class="center">
@@ -138,7 +140,8 @@
               </i>
             </div>
             <br>
-            <span class="text-shadow">Check them out here...</span>
+            <div class="center"><span class="text-shadow">Check them out here...</span>
+            </div>
           </div>
         </a>
         <!-- Modal Structure -->
@@ -149,73 +152,59 @@
               allowfullscreen></iframe>
             <iframe width="900" height="475" src="https://www.youtube.com/embed/hCDzSR6bW10?rel=0" frameborder="0" allow="autoplay; encrypted-media"
               allowfullscreen></iframe>
-            <iframe width="900" height="475" src="https://www.youtube.com/embed/9_TsNeX2IXo?rel=0" frameborder="0" allow="autoplay; encrypted-media"
-              allowfullscreen></iframe>
           </div>
         </div>
       </div>
-      </div>
-      <div class="row center grid-example col s12 m12 white lighten-2 z-depth-3">
-        <h5 style="padding: 10px 0;">Your Workout Plans</h5>
-        <table class="highlight striped responsive-table">
-          <thead>
-            <tr>
-                <th>Name</th>
-                <th>Reps</th>
-                <th>Sets</th>
-                <th>Weight</th>
-            </tr>
-          </thead>
-  
-          <tbody>
-            <tr id="new-exercise">
-              <td id="new-name">Deadlift</td>
-              <td id="new-reps">20</td>
-              <td id="new-sets">10</td>
-              <td id="new-weights">160</td>
-
-            </tr>
-            <tr>
-              <td>Bench Press</td>
-              <td>20</td>
-              <td>20</td>
-              <td>170</td>
-
-            </tr>
-            <tr>
-              <td>Hammer Curl</td>
-              <td>30</td>
-              <td>10</td>
-              <td>200</td>
-
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="row">
-        <div id="bmi-calculator" class="box2 grid-example col s3 white lighten-2 z-depth-3">
-          <h5 class="center">BMI Calculator</h5>
-          <div id="calculator">
-            <input type="text" value="" name="weight" id="weight" placeholder="Weight"> lbs</input><br>
-            <input type="text" value="" name="feet" id="feet" placeholder="Height"> ft</input>
-            <label for="inches"></label>
-            <input type="text" value="" name="inches" id="inches"> in</input><br>
-            <button class="button" id="button">Calculate</button>
-            <div id="bmi_result"></div>
-            <div id="category_result">
-            </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="credit">Credit: Emma Oppermann</div>
-          </div>
-        </div>
-        <div class="grid-example col s5 lighten-2">
-          <img src="assets/images/chairdip.jpg" class="responsive-img">
+      <div id="bmi-calculator" class="box2 grid-example col s2 white lighten-2 z-depth-3" style="height: 265px;">
+        <h5 class="center" style="margin-bottom: 0">BMI Calculator</h5>
+        <div id="calculator" class="s1">
+          <input type="text" value="" name="weight" id="weight" placeholder="Weight" style="width:30%"> lbs</input><br>
+          <input type="text" value="" name="feet" id="feet" placeholder="Height" style="width:30%"> ft</input>
+          <label for="inches"></label>
+          <input type="text" value="" name="inches" id="inches" style="width:30%"> in</input><br>
+          <button class="button waves-effect waves-light btn" id="button">Calculate</button>
+          <div>Your BMI: <div id="bmi_result" style="display:inline"></div></div>
+          <div>Your category: <div id="category_result" style="display:inline">
+          </div></div>
         </div>
       </div>
+    </div>
+    <div class="row center grid-example col s12 m12 white lighten-2 z-depth-3">
+      <h5 style="padding: 10px 0;">Your Workout Plans</h5>
+      <table class="highlight striped responsive-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Reps</th>
+            <th>Sets</th>
+            <th>Weight</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr id="new-exercise">
+            <td id="new-name">Deadlift</td>
+            <td id="new-reps">20</td>
+            <td id="new-sets">10</td>
+            <td id="new-weights">160</td>
+
+          </tr>
+          <tr>
+            <td>Bench Press</td>
+            <td>20</td>
+            <td>20</td>
+            <td>170</td>
+
+          </tr>
+          <tr>
+            <td>Hammer Curl</td>
+            <td>30</td>
+            <td>10</td>
+            <td>200</td>
+
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
   <footer class="page-footer blue-grey">
