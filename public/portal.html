@@ -84,8 +84,8 @@
       </div>
     </div>
     <div class="row">
-      <div class="row" style="margin-bottom:0;">
-        <div class="col s6 m6" style="padding:0; margin-right: 5px;">
+      <div style="margin-bottom:0;">
+        <div class="col s6" style="padding:0; margin-right: 5px;">
           <!-- Modal Trigger -->
           <div class="card" style="margin-top: 0;">
             <a class="modal-trigger" href="#modal1">
@@ -117,10 +117,10 @@
               allowfullscreen></iframe>
           </div>
         </div>
-        <div id="time" class="box2 grey time grid-example col s3 m3 white-text lighten-2 z-depth-2 text-shadow" style="height: 230px;">
+        <div id="time" class="box2 grey time grid-example col s2 white-text lighten-2 z-depth-2 text-shadow" style="height: 230px;">
         </div>
         <a href="plans.html">
-          <div class="box3 grid-example col s3 m3 yellow lighten-2 z-depth-3 pulse" style="height: 230px;">
+          <div class="box3 grid-example col s2 yellow lighten-2 z-depth-3 pulse" style="height: 230px;">
             <h5 class="flow-text center text-shadow">Train Smarter</h5>
             <div class="center">
               <i class="material-icons large center text-shadow white-text">lightbulb_outline</i>
@@ -130,7 +130,7 @@
           </div>
         </a>
         <a class="modal-trigger" href="#modal2">
-          <div class="box3 grid-example col s3 m3 red darken-1 white-text lighten-2 z-depth-3" style="margin-top: 5px; height: 230px;">
+          <div class="box3 grid-example col s2 red darken-1 white-text lighten-2 z-depth-3" style="margin-top: 5px; height: 230px;">
             <h5 class="flow-text center text-shadow">Watch Videos</h5>
             <br>
             <div class="center">
@@ -154,9 +154,46 @@
           </div>
         </div>
       </div>
+      </div>
+      <div class="row center grid-example col s12 m12 white lighten-2 z-depth-3">
+        <h5 style="padding: 10px 0;">Your Workout Plans</h5>
+        <table class="highlight striped responsive-table">
+          <thead>
+            <tr>
+                <th>Name</th>
+                <th>Reps</th>
+                <th>Sets</th>
+                <th>Weight</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr id="new-exercise">
+              <td id="new-name">Deadlift</td>
+              <td id="new-reps">20</td>
+              <td id="new-sets">10</td>
+              <td id="new-weights">160</td>
+
+            </tr>
+            <tr>
+              <td>Bench Press</td>
+              <td>20</td>
+              <td>20</td>
+              <td>170</td>
+
+            </tr>
+            <tr>
+              <td>Hammer Curl</td>
+              <td>30</td>
+              <td>10</td>
+              <td>200</td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <div class="row">
-        <div id="bmi-calculator" class="box2 grid-example col s3 m3 white lighten-2 z-depth-3" style="height: 552px;
-                  width: 440px !important;">
+        <div id="bmi-calculator" class="box2 grid-example col s3 white lighten-2 z-depth-3">
           <h5 class="center">BMI Calculator</h5>
           <div id="calculator">
             <input type="text" value="" name="weight" id="weight" placeholder="Weight"> lbs</input><br>
@@ -175,7 +212,9 @@
             <div class="credit">Credit: Emma Oppermann</div>
           </div>
         </div>
-        <img src="assets/images/chairdip.jpg" class="responsive-img" style="width: 640px;">
+        <div class="grid-example col s5 lighten-2">
+          <img src="assets/images/chairdip.jpg" class="responsive-img">
+        </div>
       </div>
     </div>
   </div>
