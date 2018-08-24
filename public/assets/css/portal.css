@@ -18,6 +18,12 @@
 
 .box2 {
     margin: 0 5px 0 0;
+    width: 215px !important;
+}
+
+.box3 {
+  margin: 0 5px 0 0;
+  width: 215px !important;
 }
 
 .box:hover {
@@ -35,9 +41,8 @@ body {
 }
 
 .time{
-    margin: 0 5px 0 0;
-    float: right;
-    font-size: 1.7rem;
+  font-size: 50px;
+  padding-top: 75px !important;
 }
 
 .welcome span {
@@ -83,4 +88,20 @@ body {
   #exercisename {
     font-size: 50px;
     text-transform: uppercase;
+  }
+
+  .card-image:hover {
+    opacity: 0.30;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+  }
+
+  .box3:hover {
+    opacity: 0.30;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+  }
+  .sidenav .user-view {
+    padding: 15px 45px 0;
+    margin-bottom: 0;
   }

@@ -1,154 +1,163 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>BlueWave - Fitness</title>
-      <link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-icon-57x57.png">
-      <link rel="apple-touch-icon" sizes="60x60" href="assets/images/apple-icon-60x60.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="assets/images/apple-icon-76x76.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-icon-120x120.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="assets/images/apple-icon-144x144.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="assets/images/apple-icon-152x152.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-icon-180x180.png">
-      <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/android-icon-192x192.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-      <link rel="manifest" href="/manifest.json">
-      <meta name="msapplication-TileColor" content="#ffffff">
-      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-      <meta name="theme-color" content="#ffffff">
-      <!-- Compiled and minified CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-   </head>
-   <nav>
-      <div class="nav-wrapper blue">
-         <div class="brand-logo center">
-            <span class="blue" style="padding: 10px;">
-               <span class="lighter">blue</span><span class="lighter"><b style="color:#000">wave</b><span>fitness</span></span>
-               <svg class="logo-loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340">
-                  <circle cx="170" cy="170" r="160" stroke="#000"/>
-                  <circle cx="170" cy="170" r="135" stroke="#FFF"/>
-                  <circle cx="170" cy="170" r="110" stroke="#000"/>
-                  <circle cx="170" cy="170" r="85" stroke="#FFF"/>
-               </svg>
-            </span>
-         </div>
-         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#signin" class="white-text"><i class="material-icons center">account_box</i></a></li>
-         </ul>
-      </div>
-   </nav>
-   <body>
-      <div class="video-container">
-         <video muted loop id="video" autoplay="autoplay">
-            <source src="assets/video/man.mp4" type="video/mp4"/>
-         </video>
-         <div class="overlay">
-           <div class="black-overlay"><h1 class="white-text lighter" style="margin: 400px 0 0 10px;">Your very own personalized Fitness Portal</h1>
-            <p class="white-text lighter" style="margin-left:15px;">Store your fitness plan, chat with others, calculate your BMI. All in one place. All at your convenience.</p></div>
-         </div>
-         <a class="scroll-link" href="#signin">
-          <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYMid meet">
-          <g fill="none" fill-rule="evenodd">
-            <rect width="70" height="118" x="1.5" y="1.5" stroke="#FFF" stroke-width="3" rx="36"/>
-            <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#FFF"/>
-          </g>
+<head>
+  <title>BlueWave - Fitness</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<nav>
+  <div class="nav-wrapper blue">
+    <div class="brand-logo center">
+      <span class="blue" style="padding: 10px;">
+        <span class="lighter">blue</span><span class="lighter"><b style="color:#000">wave</b><span>fitness</span></span>
+        <svg class="logo-loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340">
+          <circle cx="170" cy="170" r="160" stroke="#000" />
+          <circle cx="170" cy="170" r="135" stroke="#FFF" />
+          <circle cx="170" cy="170" r="110" stroke="#000" />
+          <circle cx="170" cy="170" r="85" stroke="#FFF" />
         </svg>
-        </a>
-      </div>
-      <div id="container" class="container" style="margin-top: 20px;">
-          <div class="row">
-              <div class="col s4">
-                <div class="center promo promo-example">
-                  <i class="material-icons large orange-text text-lighten-1">account_balance</i>
-                  <p class="promo-caption">Free is good</p>
-                  <p class="light center">We will always be a free business model.</p>
-                </div>
-              </div>
-              <div class="col s4">
-                <div class="center promo promo-example">
-                  <i class="material-icons large red-text text-lighten-2">security</i>
-                  <p class="promo-caption">Security</p>
-                  <p class="light center">Your information is secure with us.</p>
-                </div>
-              </div>
-              <div class="col s4">
-                <div class="center promo promo-example">
-                  <i class="material-icons large green-text text-lighten-2">directions_bike</i>
-                  <p class="promo-caption">Your fitness information</p>
-                  <p class="light center">We are always up-to-date on your fitness information.</p>
-                </div>
-              </div>
-            </div>
-            <div class="divider" style="margin-bottom:20px;"></div>
+      </span>
+    </div>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="#signin" class="white-text"><i class="material-icons center">account_box</i></a></li>
+    </ul>
+  </div>
+</nav>
 
-         <div class="row">
-            <div class="col s4">
-               <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
-                     <img class="activator" src="assets/images/office.jpg">
-                  </div>
-                  <div class="card-content">
-                     <span class="card-title activator grey-text text-darken-4">Join Our Community<i class="material-icons right">more_vert</i></span>
-                     <p><a href="mailto:bluewave@fake.com?Subject=BlueWave Contact Form" class="grey-text"><i class="material-icons left red-text">email</i>Contact Us - Email</a></p>
-                  </div>
-                  <div class="card-reveal">
-                     <span class="card-title grey-text text-darken-4">We have a lot to offer...<i class="material-icons right">close</i></span>
-                     <p>Over 250 workout exercises<span class="new badge red"></span></p>
-                     <p>Over 500 workout videos<span class="new badge blue"></span></p>
-                     <p>Chat with others and see who's mirin who<span class="new badge red"></span></p>
-                     <p>Talk trash about someone else's workout plan</p>
-                     <p>It's time to cultivate mass</p>
-                     <p>Zyzz RIP</p>
-                  </div>
-               </div>
-            </div>
-            <div id="signin" class="col s8">
-               <h5><i class="material-icons small left">account_box</i>Sign In</h5>
-               <p>Please sign in with your email address and password below. You can sign in with your Google, Facebook, or Twitter account. Your account is safe with us.</p>
-               <form action="/login" method="post">
-                  <div class="row">
-                     <div class="input-field col s12">
-                        <input type="text" name="username"/>
-                        <label>Username</label>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="input-field col s12">
-                        <input type="password" name="password"/>
-                        <label for="password">Password</label>
-                     </div>
-                  </div>
-                  <button class="btn-floating btn-medium pulse blue" type="submit" name="action" value="Log In"><i class="material-icons right">send</i>
-                  </button>
-               </form>
-            </div>
-         </div>
+<body>
+  <div class="video-container">
+    <video muted loop id="video" autoplay="autoplay">
+      <source src="assets/video/man.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay">
+      <div class="black-overlay">
+        <h1 class="white-text lighter" style="margin: 400px 0 0 10px;">Your very own personalized Fitness Portal</h1>
+        <p class="white-text lighter" style="margin-left:15px;">Store your fitness plan, chat with others, calculate your
+          BMI. All in one place. All at your convenience.</p>
       </div>
-      <footer class="page-footer blue-grey">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Additional Information</h5>
-                <p class="grey-text text-lighten-4">This is group project #2 for RBC. This website uses Materialize.css, jQuery, JavaScript, MySQL, Node / Express. </p>
-                <a class="waves-effect waves-light btn pulse green" href="https://github.com/thomaschsu/bluewavefitness">Github</a>
-              </div>
+    </div>
+    <a class="scroll-link" href="#signin">
+      <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYMid meet">
+        <g fill="none" fill-rule="evenodd">
+          <rect width="70" height="118" x="1.5" y="1.5" stroke="#FFF" stroke-width="3" rx="36" />
+          <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#FFF" />
+        </g>
+      </svg>
+    </a>
+  </div>
+  <div id="container" class="container" style="margin-top: 20px;">
+    <div class="row">
+      <div class="col s4">
+        <div class="center promo promo-example">
+          <i class="material-icons large orange-text text-lighten-1">account_balance</i>
+          <p class="promo-caption">Free is good</p>
+          <p class="light center">We will always be a free business model.</p>
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="center promo promo-example">
+          <i class="material-icons large red-text text-lighten-2">security</i>
+          <p class="promo-caption">Security</p>
+          <p class="light center">Your information is secure with us.</p>
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="center promo promo-example">
+          <i class="material-icons large green-text text-lighten-2">directions_bike</i>
+          <p class="promo-caption">Your fitness information</p>
+          <p class="light center">We are always up-to-date on your fitness information.</p>
+        </div>
+      </div>
+    </div>
+    <div class="divider" style="margin-bottom:20px;"></div>
+
+    <div class="row">
+      <div class="col s4">
+        <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="assets/images/office.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Join Our Community<i class="material-icons right">more_vert</i></span>
+            <p><a href="mailto:bluewave@fake.com?Subject=BlueWave Contact Form" class="grey-text"><i class="material-icons left red-text">email</i>Contact
+                Us - Email</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">We have a lot to offer...<i class="material-icons right">close</i></span>
+            <p>Over 250 workout exercises<span class="new badge red"></span></p>
+            <p>Over 500 workout videos<span class="new badge blue"></span></p>
+            <p>Chat with others and see who's mirin who<span class="new badge red"></span></p>
+            <p>Talk trash about someone else's workout plan</p>
+            <p>It's time to cultivate mass</p>
+            <p>Zyzz RIP</p>
+          </div>
+        </div>
+      </div>
+      <div id="signin" class="col s8">
+        <h5><i class="material-icons small left">account_box</i>Sign In</h5>
+        <p>Please sign in with your email address and password below. You can sign in with your Google, Facebook, or Twitter
+          account. Your account is safe with us.</p>
+        <form action="/login" method="post">
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" name="username" />
+              <label>Username</label>
             </div>
           </div>
-          <div class="footer-copyright">
-            <div class="container">
-              blueWavefitness &copy; 2018 All Rights Reserved.
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="password" name="password" />
+              <label for="password">Password</label>
             </div>
           </div>
-        </footer>
-      <script src="assets/js/script.js"></script>
-      <!-- Compiled and minified JavaScript -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-   </body>
+          <button class="btn-floating btn-medium pulse blue" type="submit" name="action" value="Log In"><i class="material-icons right">send</i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer class="page-footer blue-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Additional Information</h5>
+          <p class="grey-text text-lighten-4">This is group project #2 for RBC. This website uses Materialize.css, jQuery,
+            JavaScript, MySQL, Node / Express. </p>
+          <a class="waves-effect waves-light btn pulse green" href="https://github.com/thomaschsu/bluewavefitness">Github</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        blueWavefitness &copy; 2018 All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/script.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+</body>
+
 </html>
