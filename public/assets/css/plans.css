@@ -239,16 +239,28 @@ margin-right: auto;
   }
 
   .cardHolder {
-      width: 33%;
+      width: 30%;
       height: 300px;
       float: left;
       margin: 20px;
       padding: 10px;
   }
 
-  .ccontent {
+  .content {
       height: 67%;
-      width: 90%
+      width: 90%;
       padding: 6px;
       margin: 2px;
+  }
+
+  .empty-div {
+    padding: 160px 0;
+  }
+
+  .row .col.s2{
+    padding: 10px 15px;
+  }
+
+  .card .card-content {
+    padding: 12px;
   }

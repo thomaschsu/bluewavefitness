@@ -1,48 +1,46 @@
-
-
 var url = "https://wger.de/api/v2/";
 var category = [{
-    id: 10,
-    name: "Abs"
-},
-{
-    id: 8,
-    name: "Arms"
-},
-{
-    id: 12,
-    name: "Back"
-},
-{
-    id: 14,
-    name: "Calves"
-},
-{
-    id: 11,
-    name: "Chest"
-},
-{
-    id: 9,
-    name: "Legs"
-},
-{
-    id: 13,
-    name: "Shoulders"
-}
+        id: 10,
+        name: "Abs"
+    },
+    {
+        id: 8,
+        name: "Arms"
+    },
+    {
+        id: 12,
+        name: "Back"
+    },
+    {
+        id: 14,
+        name: "Calves"
+    },
+    {
+        id: 11,
+        name: "Chest"
+    },
+    {
+        id: 9,
+        name: "Legs"
+    },
+    {
+        id: 13,
+        name: "Shoulders"
+    }
 ];
 
-$(".group").on("click", function () {
+$(".group").on("click", function() {
     var cat = $(this).attr("val");
     var state = $(this).attr("state");
     if (state === "off") {
         $(this).attr("state", "on");
         $.ajax({
-            url: url + "exercise/?limit=100&muscle=" + cat + "&language=2", success: function (err, body, result) {
+            url: url + "exercise/?limit=100&muscle=" + cat + "&language=2",
+            success: function(err, body, result) {
                 //console.log(err.results)
 
                 for (i = 0; i < err.results.length; i++) {
-                    if (err.results[i].name === undefined) {
-                    } else {
+                    if (err.results[i].name === "" ) {} else {
                         //console.log(err.results[i].name)
                         var j = 0;
                         var cardHover = $("<div></div>");
@@ -60,7 +58,7 @@ $(".group").on("click", function () {
                         var abc = $("<div></div>");
                         $(abc).attr("id", i);
                         $(abc).addClass("clickbutton");
-                        var def = $("<a class 'btn-floating btn-small waves-effect waves-light blue lighten-1'>");
+                        var def = $("<a class='btn-floating btn-small waves-effect waves-light blue lighten-1'>");
                         var ghi = $("<i class='material-icons'>add</i>");
                         def.append(ghi)
                         abc.append(def);
@@ -68,7 +66,7 @@ $(".group").on("click", function () {
                         var exBody = $("<div></div>");
                         exBody.addClass("card-content grey lighten-4 ccontent");
 
-                        
+
 
                         var cardReps = $("<div></div>");
                         cardReps.attr("id", err.results[i].name)
@@ -120,7 +118,8 @@ $(".group").on("click", function () {
         })
 
 
-    } if (state === "on") {
+    }
+    if (state === "on") {
         $("#newcards").empty();
         $(this).attr("state", "off");
     }
@@ -129,4 +128,3 @@ $(".group").on("click", function () {
     //console.log(cat);
 
 })
-

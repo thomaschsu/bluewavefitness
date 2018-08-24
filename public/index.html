@@ -122,17 +122,17 @@
         <form action="/login" method="post">
           <div class="row">
             <div class="input-field col s12">
-              <input type="text" name="username" />
+              <input type="text" name="username" id="username" />
               <label>Username</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input type="password" name="password" />
+              <input type="password" name="password" id="password"/>
               <label for="password">Password</label>
             </div>
           </div>
-          <button class="btn-floating btn-medium pulse blue" type="submit" name="action" value="Log In"><i class="material-icons right">send</i>
+          <button class="btn-floating btn-medium pulse blue" type="submit" name="action" value="Log In" id="login"><i class="material-icons right">send</i>
           </button>
         </form>
       </div>
@@ -156,6 +156,7 @@
     </div>
   </footer>
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/user.js"></script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 </body>
