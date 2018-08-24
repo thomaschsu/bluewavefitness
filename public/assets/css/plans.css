@@ -235,4 +235,20 @@ margin-right: auto;
   .muscle-fix {
       padding: 5px 0;
       display: block;
+
+  }
+
+  .cardHolder {
+      width: 33%;
+      height: 300px;
+      float: left;
+      margin: 20px;
+      padding: 10px;
+  }
+
+  .ccontent {
+      height: 67%;
+      width: 90%
+      padding: 6px;
+      margin: 2px;
   }
