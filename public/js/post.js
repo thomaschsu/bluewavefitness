@@ -25,7 +25,8 @@ $(document).ready(function () {
 
         $("#workoutSubmit").on("click", function() {
             //console.log("submitted")
-            var workoutString = JSON.stringify(workoutArray)
+            var workoutString = workoutArray;
+            console.log(workoutString);
             $.post("/profile", workoutString).then(getExercises);  
 
 
