@@ -162,3 +162,10 @@ a {
 .text-shadow {
   text-shadow: 1px 1px #000;
 }
+
+
+.card-hoverable {
+  width: 15%;
+  height: 60px;
+  float: left;
+}
