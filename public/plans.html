@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BlueWave - Fitness</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/plans.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<nav>
+  <div class="nav-wrapper blue">
+    <div class="brand-logo center">
+      <span class="blue" style="padding: 10px;">
+        <span class="lighter">blue</span><span class="lighter"><b style="color:#000">wave</b><span>fitness</span>
+        </span>
+        <svg class="logo-loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340">
+          <circle cx="170" cy="170" r="160" stroke="#000" />
+          <circle cx="170" cy="170" r="135" stroke="#FFF" />
+          <circle cx="170" cy="170" r="110" stroke="#000" />
+          <circle cx="170" cy="170" r="85" stroke="#FFF" />
+        </svg>
+      </span>
+    </div>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>
+        <a href="portal.html">Portal</a>
+      </li>
+      <li>
+        <a href="plans.html" class="selected">My Plans</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<body>
+  <div id="container" style="margin-top: 20px;">
+    <div class="row">
+      <br>
+      <div class="heading z-depth-2 center">
+        <span class="flow-text light center" id="text">Customize your workout plan<br> With over 50+ customizable options</span>
+      </div>
+    </div>
+      <div class="row" id="muscle-group">
+        <div class="col s2 z-depth-4">
+          <span class="muscle-group">
+            <h6 class="center">Muscle Group</h6>
+          </span>
+          <div class="form-check">
+            <label class="form-check-label muscle-fix">
+              <input type="checkbox" value="abs" id="abs">
+              <span>Abs</span>
+            </label>
+            <label class="form-check-label muscle-fix">
+              <input type="checkbox" value="arms" id="arms" class=" form-check-input boxes">
+              <span>Arms</span>
+            </label>
+            <label class="form-check-label muscle-fix">
+              <input type="checkbox" value="back" id="back" class=" form-check-input">
+              <span>Back</span>
+            </label>
+            <label class="form-check-label muscle-fix">
+              <input type="checkbox" value="calves" id="calves" class="form-check-input">
+              <span>Calves</span>
+            </label>
+            <label class="form-check-label muscle-fix">
+              <input type="checkbox" value="chest" id="chest" class=" form-check-input">
+              <span>Chest</span>
+            </label>
+            <label class="form-check-label muscle-fix">
+              <input type="checkbox" value="legs" id="legs" class="red form-check-input">
+              <span>Legs</span>
+            </label>
+            <label class="form-check-label muscle-fix">
+              <input type="checkbox" value="shoulders" id="shoulders" class=" form-check-input">
+              <span>Shoulders</span>
+            </label>
+          </div>
+        </div>
+        <div class="col s6 m5">
+          <div class="card hoverable" style="margin-top: 0;">
+            <div class="card-content">
+              <h6 id="exercise-name" class="center">Title</h6>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <a class="btn-floating btn-small waves-effect waves-light blue lighten-1">
+                  <i class="material-icons">add</i>
+                </a>
+                <li class="tab">
+                  <a class="active" href="#reps">Reps</a>
+                </li>
+                <li class="tab">
+                  <a href="#sets">Sets</a>
+                </li>
+                <li class="tab">
+                  <a href="#weight">Weight</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="reps">
+                <input placeholder="" id="reps_input1" type="text" class="validate center">
+                <label for="reps_input" class="center">Reps</label>
+              </div>
+              <div id="sets">
+                <input placeholder="" id="sets_input1" type="text" class="validate center">
+                <label for="sets_input" class="center">Sets</label>
+              </div>
+              <div id="weight">
+                <input placeholder="" id="weight_input1" type="text" class="validate center">
+                <label for="weight_input" class="center ">Weight</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m5">
+          <div class="card hoverable" style="margin-top: 0;">
+            <div class="card-content">
+              <h6 id="exercise-name" class="center">Title</h6>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <a class="btn-floating btn-small waves-effect waves-light blue lighten-1">
+                  <i class="material-icons">add</i>
+                </a>
+                <li class="tab">
+                  <a class="active" href="#reps1">Reps</a>
+                </li>
+                <li class="tab">
+                  <a href="#sets1">Sets</a>
+                </li>
+                <li class="tab">
+                  <a href="#weight1">Weight</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="reps1">
+                <input placeholder="" id="reps_input1" type="text" class="validate center">
+                <label for="reps_input" class="center">Reps</label>
+              </div>
+              <div id="sets1">
+                <input placeholder="" id="sets_input1" type="text" class="validate center">
+                <label for="sets_input" class="center">Sets</label>
+              </div>
+              <div id="weight1">
+                <input placeholder="" id="weight_input1" type="text" class="validate center">
+                <label for="weight_input" class="center ">Weight</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col s2">
+           </div>
+          <div class="col s6 m5">
+              <div class="card hoverable" style="margin-top: 0;">
+                <div class="card-content">
+                  <h6 id="exercise-name" class="center">Title</h6>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width">
+                    <a class="btn-floating btn-small waves-effect waves-light blue lighten-1">
+                      <i class="material-icons">add</i>
+                    </a>
+                    <li class="tab">
+                      <a class="active" href="#reps2">Reps</a>
+                    </li>
+                    <li class="tab">
+                      <a href="#sets2">Sets</a>
+                    </li>
+                    <li class="tab">
+                      <a href="#weight2">Weight</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-content grey lighten-4">
+                  <div id="reps2">
+                    <input placeholder="" id="reps_input1" type="text" class="validate center">
+                    <label for="reps_input" class="center">Reps</label>
+                  </div>
+                  <div id="sets2">
+                    <input placeholder="" id="sets_input1" type="text" class="validate center">
+                    <label for="sets_input" class="center">Sets</label>
+                  </div>
+                  <div id="weight2">
+                    <input placeholder="" id="weight_input1" type="text" class="validate center">
+                    <label for="weight_input" class="center ">Weight</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s6 m5">
+                <div class="card hoverable" style="margin-top: 0;">
+                  <div class="card-content">
+                    <h6 id="exercise-name" class="center">Title</h6>
+                  </div>
+                  <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width">
+                      <a class="btn-floating btn-small waves-effect waves-light blue lighten-1">
+                        <i class="material-icons">add</i>
+                      </a>
+                      <li class="tab">
+                        <a class="active" href="#reps3">Reps</a>
+                      </li>
+                      <li class="tab">
+                        <a href="#sets3">Sets</a>
+                      </li>
+                      <li class="tab">
+                        <a href="#weight3">Weight</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-content grey lighten-4">
+                    <div id="reps3">
+                      <input placeholder="" id="reps_input1" type="text" class="validate center">
+                      <label for="reps_input" class="center">Reps</label>
+                    </div>
+                    <div id="sets3">
+                      <input placeholder="" id="sets_input1" type="text" class="validate center">
+                      <label for="sets_input" class="center">Sets</label>
+                    </div>
+                    <div id="weight3">
+                      <input placeholder="" id="weight_input1" type="text" class="validate center">
+                      <label for="weight_input" class="center ">Weight</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      </div>
+      <footer class="page-footer blue-grey" style="padding-top:0">
+        <div class="container">
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+            blueWavefitness &copy; 2018 All Rights Reserved.
+          </div>
+        </div>
+      </footer>
+      <script src="assets/js/plans.js"></script>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+</body>
+
+</html>
