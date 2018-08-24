@@ -14,6 +14,6 @@ module.exports = function(app) {
 
   // cms route loads cms.html
   app.get("/profile", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/homepage.html"));
+    res.sendFile(path.join(__dirname, "../public/plans.html"));
   });
 };
