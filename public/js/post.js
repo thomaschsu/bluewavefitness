@@ -1,6 +1,6 @@
 $(document).ready(function () {
-
-    var workoutArray = [];
+    var workoutObject;
+    //var workoutArray = [];
 
     $(document).on("click", ".clickbutton", function () {
         var id = $(this).attr("id");
@@ -12,25 +12,31 @@ $(document).ready(function () {
         var weightsW = $("#weight_input" + id).val().trim();
         //console.log(weightsW);
         var titleT = $("#title_input" + id).attr("val");
+
+        var workoutN = $("#workoutName").val().trim();
         console.log(titleT);
-        var workoutObject = {
+        workoutObject = {
             name: titleT,
             reps: repsR,
             sets: setsS,
-            weight: weightsW
+            weight: weightsW,
+            workoutName: workoutN
         }
-        workoutArray.push(workoutObject);
-        console.log(workoutArray)
+        console.log(workoutObject);
+        //workoutArray.push(workoutObject);
+        //console.log(workoutArray)
+
+        $.post("/profile", workoutObject).then(getExercises); 
     });
 
-        $("#workoutSubmit").on("click", function() {
+        /*$("#workoutSubmit").on("click", function() {
             //console.log("submitted")
-            var workoutString = workoutArray;
-            console.log(workoutString);
-            $.post("/profile", workoutString).then(getExercises);  
+            //var a = JSON.stringify(workoutArray)
+            //console.log(a);
+            $.post("/profile", workoutObject).then(getExercises);  
 
 
-        })
+        })*/
 
 
 
@@ -40,8 +46,3 @@ $(document).ready(function () {
 
 
 });
-    /*
-    
-    
-    */
-

@@ -11,28 +11,26 @@ module.exports = function(app) {
   });
 
 
+  app.get("/api/portal", function(req,res) {
+    db.Exercise.findAll({}).then(function(Exercise) {
+      res.json(Exercise)
+    })
+  })
+
+
 
 
   // Create a new example
   app.post("/profile", function(req, res) {
     console.log(req.body);
     console.log("TEST");
-    db.Exercise.create
-    ({name: req.body
-    
-    
-    
-    }).then(function(Exercise) {
+    //var workoutString = JSON.stringify(req.body)
+    db.Exercise.create(req.body).then(function(Exercise) {
       res.json(Exercise);
     });
   });
 
-  // fetch all exercise data
-  app.get("/api/portal", function(req, res) {
-    db.Exercise.findAll({}).then(function(Exercise) {
-      res.json(Exercise);
-    });
-  });
+
 
   // app.get("/api/portal", function(req, res) {
   //   db.Exercise.findAll({}).then(function(Exercise) {
