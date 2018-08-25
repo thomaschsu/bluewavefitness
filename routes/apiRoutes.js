@@ -15,15 +15,28 @@ module.exports = function(app) {
 
   // Create a new example
   app.post("/profile", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+    console.log(req.body);
+    console.log("TEST");
+    db.Exercise.create
+    ({name: req.body
+    
+    
+    
+    }).then(function(Exercise) {
+      res.json(Exercise);
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
+  // fetch all exercise data
+  app.get("/api/portal", function(req, res) {
+    db.Exercise.findAll({}).then(function(Exercise) {
+      res.json(Exercise);
     });
   });
+
+  // app.get("/api/portal", function(req, res) {
+  //   db.Exercise.findAll({}).then(function(Exercise) {
+  //     res.json(Exercise);
+  //   });
+  // });
 };

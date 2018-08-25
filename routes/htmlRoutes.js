@@ -16,4 +16,11 @@ module.exports = function(app) {
   app.get("/profile", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/plans.html"));
   });
+
+
+app.get("/portal", function(req, res) {
+  res.sendFile(path.join(__dirname, "../public/portal.html"));
+});
+
+
 };
