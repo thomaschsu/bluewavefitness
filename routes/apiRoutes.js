@@ -13,6 +13,7 @@ module.exports = function(app) {
 
   app.get("/api/portal", function(req,res) {
     db.Exercise.findAll({}).then(function(Exercise) {
+      console.log(Exercise)
       res.json(Exercise)
     })
   })
