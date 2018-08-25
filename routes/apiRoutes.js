@@ -28,9 +28,15 @@ module.exports = function(app) {
   });
 
   // fetch all exercise data
-  app.get("/portal", function(req, res) {
+  app.get("/api/portal", function(req, res) {
     db.Exercise.findAll({}).then(function(Exercise) {
       res.json(Exercise);
     });
   });
+
+  // app.get("/api/portal", function(req, res) {
+  //   db.Exercise.findAll({}).then(function(Exercise) {
+  //     res.json(Exercise);
+  //   });
+  // });
 };
