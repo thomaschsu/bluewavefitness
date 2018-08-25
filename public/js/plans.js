@@ -1,3 +1,5 @@
+$(document).ready(function () {
+
 var url = "https://wger.de/api/v2/";
 var category = [{
         id: 10,
@@ -125,7 +127,33 @@ $(".group").on("click", function() {
         $(this).attr("state", "off");
     }
 
-
-    //console.log(cat);
-
 })
+
+var getUser = function(u) {
+    console.log(u[0].username)
+
+    var w = $("#welcome");
+    var fN = u[0].username.split('@');
+    var fNUpper = fN[0].toUpperCase();
+    w.append(fNUpper);
+
+    var x = $("#name");
+    var xN = u[0].username.split('@');
+    var xNUpper = xN[0].toUpperCase();
+    x.append(xNUpper);
+
+    var y = $("#sideName");
+    var z = $("#sideEmail");
+
+    y.append(fNUpper)
+    z.append(u[0].username)
+
+
+
+
+}
+
+
+$.get("/api/profile").then(getUser);
+
+});

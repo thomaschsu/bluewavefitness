@@ -13,11 +13,16 @@ module.exports = function(app) {
 
   app.get("/api/portal", function(req,res) {
     db.Exercise.findAll({}).then(function(Exercise) {
-      console.log(Exercise)
       res.json(Exercise)
     })
   })
 
+  app.get("/api/profile", function(req,res) {
+    db.User.findAll({}).then(function(Exercise) {
+      res.json(Exercise)
+    })
+  })
+  
 
 
 
