@@ -52,12 +52,12 @@
   </div>
 </nav>
 
-<body onload="startTime()">
+<body>
   <div id="container" class="container" style="margin-top: 20px;">
     <ul id="slide-out" class="sidenav">
       <li>
         <div class="user-view" style="position: inherit;">
-          <div class="background" style="height: 200px;">
+          <div class="background" style="height: 150px;">
             <img src="assets/images/bg.jpg">
           </div>
           <a href="#user"><img class="circle left" src="assets/images/profile.png"></a>
@@ -117,11 +117,8 @@
               allowfullscreen></iframe>
           </div>
         </div>
-        <div id="time" class="box2 grey lighten-1 time grid-example col s2 white-text lighten-2 z-depth-2 text-shadow" style="height: 260px;">
-          <div class="center"><i class="large material-icons">access_time</i></div>
-        </div>
         <a href="plans.html">
-          <div class="box3 grid-example col s2 yellow lighten-2 z-depth-3 pulse" style="height: 260px;">
+          <div class="box3 grid-example col s2 yellow lighten-2 z-depth-3 pulse" style="height: 265px;">
             <h5 class="flow-text center text-shadow">Train Smarter</h5>
             <div class="center">
               <i class="material-icons large center text-shadow white-text">lightbulb_outline</i>
@@ -130,51 +127,28 @@
             <span class="center text-shadow">Start a plan that's made just for you...</span>
           </div>
         </a>
-        <a class="modal-trigger" href="#modal2">
-          <div class="box3 grid-example col s2 red darken-1 white-text lighten-2 z-depth-3" style="margin-top: 5px; height: 260px;">
-            <h5 class="flow-text center text-shadow">Watch Videos</h5>
-            <br>
-            <div class="center">
-              <i class="material-icons large center text-shadow">ondemand_video
-              </i>
+        <div id="bmi-calculator" class="box2 grid-example col s2 white lighten-2 z-depth-3" style="height: 265px;">
+          <h5 class="center" style="margin-bottom: 0">BMI Calculator</h5>
+          <div id="calculator" class="s1">
+            <input type="text" value="" name="weight" id="weight" placeholder="Weight" style="width:30%"> lbs</input><br>
+            <input type="text" value="" name="feet" id="feet" placeholder="Height" style="width:30%"> ft</input>
+            <label for="inches"></label>
+            <input type="text" value="" name="inches" id="inches" style="width:30%"> in</input><br>
+            <button class="button waves-effect waves-light btn" id="button">Calculate</button>
+            <div>Your BMI:
+              <div id="bmi_result" style="display:inline"></div>
             </div>
-            <br>
-            <div class="center"><span class="text-shadow">Check them out here...</span>
-            </div>
-          </div>
-        </a>
-        <!-- Modal Structure -->
-        <div id="modal2" class="modal">
-          <div class="modal-content">
-            <h4 class="center">Videos</h4>
-            <iframe width="900" height="475" src="https://www.youtube.com/embed/aq9cCel1cBo" frameborder="0" allow="autoplay; encrypted-media"
-              allowfullscreen></iframe>
-            <iframe width="900" height="475" src="https://www.youtube.com/embed/nVzRNcl1m9I" frameborder="0" allow="autoplay; encrypted-media"
-              allowfullscreen></iframe>
-            <iframe width="900" height="475" src="https://www.youtube.com/embed/hCDzSR6bW10?rel=0" frameborder="0" allow="autoplay; encrypted-media"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-      <div id="bmi-calculator" class="box2 grid-example col s2 white lighten-2 z-depth-3" style="height: 265px;">
-        <h5 class="center" style="margin-bottom: 0">BMI Calculator</h5>
-        <div id="calculator" class="s1">
-          <input type="text" value="" name="weight" id="weight" placeholder="Weight" style="width:30%"> lbs</input><br>
-          <input type="text" value="" name="feet" id="feet" placeholder="Height" style="width:30%"> ft</input>
-          <label for="inches"></label>
-          <input type="text" value="" name="inches" id="inches" style="width:30%"> in</input><br>
-          <button class="button waves-effect waves-light btn" id="button">Calculate</button>
-          <div>Your BMI:
-            <div id="bmi_result" style="display:inline"></div>
-          </div>
-          <div>Your category:
-            <div id="category_result" style="display:inline">
+            <div>Your category:
+              <div id="category_result" style="display:inline">
+              </div>
             </div>
           </div>
         </div>
+        <div class="col s4 text-shadow" style="margin-left:-55px;"><canvas id="canvas" width="600" height="200"></canvas></div>
       </div>
-    </div>
-    <div class="row center grid-example col s12 m12 white lighten-2 z-depth-3">
+      </div>
+      </div>
+    <div class="row center grid-example col s10 white lighten-2 z-depth-3">
       <h5 style="padding: 10px 0;">Your Workout Plans</h5>
       <table class="highlight striped responsive-table">
         <thead>
@@ -192,7 +166,6 @@
         
       </table>
     </div>
-  </div>
   <footer class="page-footer blue-grey">
     <div class="container">
     </div>
@@ -205,11 +178,19 @@
   <script src="js/plans.js"></script>
   <script src="assets/js/portal.js"></script>
   <script src="assets/js/script.js"></script>
-  <script src="assets/js/calendar.js"></script>
+  <script src="assets/js/clock.js"></script>
   <script src="assets/js/calculator.js"></script>
   <script src="./js/portal_logic.js"></script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script type="text/javascript">
+    window._chatlio = window._chatlio||[];
+    !function(){ var t=document.getElementById("chatlio-widget-embed");if(t&&window.ChatlioReact&&_chatlio.init)return void _chatlio.init(t,ChatlioReact);for(var e=function(t){return function(){_chatlio.push([t].concat(arguments)) }},i=["configure","identify","track","show","hide","isShown","isOnline", "page", "open", "showOrHide"],a=0;a<i.length;a++)_chatlio[i[a]]||(_chatlio[i[a]]=e(i[a]));var n=document.createElement("script"),c=document.getElementsByTagName("script")[0];n.id="chatlio-widget-embed",n.src="https://w.chatlio.com/w.chatlio-widget.js",n.async=!0,n.setAttribute("data-embed-version","2.3");
+       n.setAttribute('data-widget-options', '{"embedSidebar": true}');
+       n.setAttribute('data-widget-id','080cf955-7f8b-4d35-6007-de525dca0b6b');
+       c.parentNode.insertBefore(n,c);
+    }();
+</script>
 </body>
 
 </html>

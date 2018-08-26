@@ -6,7 +6,6 @@ A fitness website that stores your workouts, uses a login, calculates your BMI -
 - - -
 ### Demo
 
-(Image will be broken for now)
 ![Image 1](/images/image01.gif)
 
 - - -
@@ -24,10 +23,12 @@ A fitness website that stores your workouts, uses a login, calculates your BMI -
 10. SVG
 
 - - - 
+
 ### Heroku Live Link
-URL
 
 - - -
 
-### Additional Information
-1. 
+### Credits
+1. JS Clock (Andreas Kristiansen)
+2. SVG Scrolling Mouse Icon (Steven Roberts)
+3. BMI Calculator (Emma Oppermann)
