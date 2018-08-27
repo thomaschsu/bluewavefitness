@@ -25,6 +25,7 @@ A fitness website that stores your workouts, uses a login, calculates your BMI -
 - - - 
 
 ### Heroku Live Link
+https://agile-beyond-80440.herokuapp.com/
 
 - - -
 
