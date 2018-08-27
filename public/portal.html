@@ -146,26 +146,41 @@
         </div>
         <div class="col s4 text-shadow" style="margin-left:-55px;"><canvas id="canvas" width="600" height="200"></canvas></div>
       </div>
-      </div>
-      </div>
-    <div class="row center grid-example col s10 white lighten-2 z-depth-3">
-      <h5 style="padding: 10px 0;">Your Workout Plans</h5>
-      <table class="highlight striped responsive-table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Reps</th>
-            <th>Sets</th>
-            <th>Weight</th>
-          </tr>
-        </thead>
-
-        <tbody id="workoutTableBody">
-          
-        </tbody>
-        
-      </table>
     </div>
+    <div class="row center">
+      <div class="grid-example col s12 white lighten-2 z-depth-3">
+        <h5 style="padding: 10px 0;">Your Workout Plans</h5>
+        <table class="highlight striped responsive-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Reps</th>
+              <th>Sets</th>
+              <th>Weight</th>
+            </tr>
+          </thead>
+
+          <tbody id="workoutTableBody">
+
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+    <!--Motivation Dialog-->
+    <div class="heading1 center-align z-depth-2 white">
+      <div class="flow-text light center white" id="text">Get inspired and stay motivated by watching
+        how others are staying fit!</div>
+    </div>
+    <br>
+    <!--Twitter Widget-->
+    <a class="twitter-grid hoverable center-align" id="twitter-grid" data-limit="5" width="70%" height="200px" href="https://twitter.com/Ryan10435220/timelines/1033543260818604033?ref_src=twsrc%5Etfw">Fit
+      collection
+    </a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <br>
+  </div>
+  <!--End Widget-->
   <footer class="page-footer blue-grey">
     <div class="container">
     </div>
@@ -184,13 +199,14 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
   <script type="text/javascript">
-    window._chatlio = window._chatlio||[];
-    !function(){ var t=document.getElementById("chatlio-widget-embed");if(t&&window.ChatlioReact&&_chatlio.init)return void _chatlio.init(t,ChatlioReact);for(var e=function(t){return function(){_chatlio.push([t].concat(arguments)) }},i=["configure","identify","track","show","hide","isShown","isOnline", "page", "open", "showOrHide"],a=0;a<i.length;a++)_chatlio[i[a]]||(_chatlio[i[a]]=e(i[a]));var n=document.createElement("script"),c=document.getElementsByTagName("script")[0];n.id="chatlio-widget-embed",n.src="https://w.chatlio.com/w.chatlio-widget.js",n.async=!0,n.setAttribute("data-embed-version","2.3");
-       n.setAttribute('data-widget-options', '{"embedSidebar": true}');
-       n.setAttribute('data-widget-id','080cf955-7f8b-4d35-6007-de525dca0b6b');
-       c.parentNode.insertBefore(n,c);
+    window._chatlio = window._chatlio || [];
+    !function () {
+      var t = document.getElementById("chatlio-widget-embed"); if (t && window.ChatlioReact && _chatlio.init) return void _chatlio.init(t, ChatlioReact); for (var e = function (t) { return function () { _chatlio.push([t].concat(arguments)) } }, i = ["configure", "identify", "track", "show", "hide", "isShown", "isOnline", "page", "open", "showOrHide"], a = 0; a < i.length; a++)_chatlio[i[a]] || (_chatlio[i[a]] = e(i[a])); var n = document.createElement("script"), c = document.getElementsByTagName("script")[0]; n.id = "chatlio-widget-embed", n.src = "https://w.chatlio.com/w.chatlio-widget.js", n.async = !0, n.setAttribute("data-embed-version", "2.3");
+      n.setAttribute('data-widget-options', '{"embedSidebar": true}');
+      n.setAttribute('data-widget-id', '080cf955-7f8b-4d35-6007-de525dca0b6b');
+      c.parentNode.insertBefore(n, c);
     }();
-</script>
+  </script>
 </body>
 
 </html>
