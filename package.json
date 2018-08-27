@@ -1,7 +1,7 @@
 {
-  "name": "starquake",
+  "name": "bluewavefitness",
   "version": "1.0.0",
-  "description": "Project 2 Starter",
+  "description": "Website to track fitness.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
